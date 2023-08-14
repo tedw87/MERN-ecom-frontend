@@ -10,9 +10,7 @@ const CartPage = () => {
           <h1>Shopping Cart</h1>
           <ListGroup variant="flush">
             {Array.from({ length: 3 }).map((item, idx) => (
-              <>
-                <CartItemComponent key={idx} /> <br />
-              </>
+              <CartItemComponent key={idx} />
             ))}
           </ListGroup>
           <Alert variant="info">Your cart is empty</Alert>
@@ -26,7 +24,7 @@ const CartPage = () => {
               Price: <span className="fw-bold">$892</span>
             </ListGroup.Item>
             <ListGroup.Item>
-              <LinkContainer to="/user/order-details">
+              <LinkContainer to="/user/cart-details">
                 <Button type="button">Proceed To Checkout</Button>
               </LinkContainer>
             </ListGroup.Item>
